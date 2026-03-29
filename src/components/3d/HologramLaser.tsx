@@ -1,4 +1,4 @@
-import { useRef, useEffect, useMemo } from 'react'
+import { useRef, useEffect, useMemo, memo } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import { Text } from '@react-three/drei'
 import * as THREE from 'three'
@@ -52,7 +52,7 @@ interface HologramLaserProps {
   active: boolean
 }
 
-export function HologramLaser({ active }: HologramLaserProps) {
+function HologramLaserInner({ active }: HologramLaserProps) {
   // TASK 3: Responsive sizing/position via viewport
   const { viewport } = useThree()
   const isMobile = viewport.width < 5
@@ -184,3 +184,5 @@ export function HologramLaser({ active }: HologramLaserProps) {
     </>
   )
 }
+
+export const HologramLaser = memo(HologramLaserInner)
