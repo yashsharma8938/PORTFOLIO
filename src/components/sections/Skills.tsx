@@ -158,7 +158,7 @@ export function Skills() {
           transition={{ delay: 0.3 }}
           className="mt-12 flex flex-wrap justify-center gap-4"
         >
-          {['React', 'TS', 'Node', 'Python', 'Three.js', 'Firebase', 'Git', 'ML'].map((tech, i) => (
+          {['React', 'TS', 'Node', 'Python', 'Three.js', 'Firebase', 'Git', 'ML'].map((tech, _i) => (
             <motion.div
               key={tech}
               whileHover={{ y: -4, scale: 1.05 }}

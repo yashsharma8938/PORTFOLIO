@@ -18,7 +18,7 @@ function LaserCylinder({
   start,
   end,
 }: {
-  meshRef: React.RefObject<THREE.Mesh>
+  meshRef: React.RefObject<THREE.Mesh | null>
   start: THREE.Vector3
   end: THREE.Vector3
 }) {

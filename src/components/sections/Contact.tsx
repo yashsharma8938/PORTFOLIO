@@ -28,7 +28,7 @@ export function Contact() {
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>()
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = async (_data: FormData) => {
     setLoading(true)
     await new Promise(r => setTimeout(r, 1500))
     setLoading(false)
